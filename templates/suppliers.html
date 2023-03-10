@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section class="product-section">
+    <div class="product-section-container">
+        <h1 class="text-info text-center">view supplier</h1>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>product</th>
+                <th>Update</th>
+            </tr>
+            {% for supplier in suppliers %}
+            <tr>
+                <td>{{ supplier.sup_name }}</td>
+                <td>{{supplier.sup_email  }}</td>
+                <td>{{supplier.sup_phone  }}</td>
+                <td><a href="/delete-supplier/{{ supplier.id }}">Delete</a></td>
+                <td><a href="/update-supplier/{{ supplier.id }}">Update</a></td>
+            </tr>
+             {% endfor %}
+        </table>
+    </div>
+
+    </section>
+
+{% endblock %}

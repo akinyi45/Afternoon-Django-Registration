@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load %}
+{% block content %}
+    <div class="row">
+    <div class="col-3"></div>
+        <div class="col-6">
+            <section class="add-product_section">
+    <div class="add-product_section-container">
+        <h1 class="text-info text-center">Add supplier</h1>
+        <form action=""method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <input required class="form-control" name="s_name" placeholder="Supplier name" type="text">
+            </div>
+            <div class="form-group">
+                <input required class="form-control" name="s_email" placeholder="Supplier email" type="email">
+            </div>
+            <div class="form-group">
+                <input required class="form-control" name="s_phone" placeholder="Supplier phone" type="tel">
+            </div>
+             <div class="form-group">
+                <input required class="form-control" name="s_product" placeholder="Supplier product" type="text">
+            </div>
+            <div class="form-group">
+                <input  class="btn btn-info" name="btn-save" value="save" type="submit">
+            </div>
+        </form>
+    </div>
+</section></div>
+        <col-3></col-3>
+        <col-3></col-3>
+        <col-3></col-3>
+    </div>
+
+
+{% endblock %}
